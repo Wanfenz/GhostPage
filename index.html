@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>心理调查问卷</title>
 		<style>
 			* {
@@ -18,7 +18,7 @@
 				width: 100%;
 				height: 100%;
 				min-height: 100vh;
-				background: #f7f8fa;
+				background: #eef2f5;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -285,7 +285,7 @@
 				max-height: 90vh;
 				padding: 25px 20px;
 				border-radius: 12px;
-				background: #fff;
+				background: #fffdf7;
 				box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 				position: relative;
 				z-index: 10;
@@ -325,8 +325,7 @@
 			    display: none;
 			    width: 100%;
 			    height: 100%;
-			    /* 全局垂直水平居中 */
-			    display: flex;
+			    /* 显示时由 JS 设置为 flex，避免 display 冲突 */
 			    flex-direction: column;
 			    justify-content: center;
 			    align-items: center;
@@ -520,7 +519,7 @@
 	</head>
 	<body>
 		<div class="box" id="mainBox">
-			<div class="title">心理健康调查问卷</div>
+			<div class="title">宿舍恋爱心理调查</div>
 			<div class="progress" id="progress">第 1 题 / 共 30 题</div>
 			<div class="question" id="question"></div>
 			<div class="options" id="options"></div>
@@ -532,49 +531,51 @@
 
 		<div class="diary-wrap" id="diaryWrap">
 			<div class="diary-page1" id="diaryPage1">
-				<div class="diary-date">04.24 阴</div>
+				<div class="diary-date">10.21 熄灯后</div>
 				<div class="diary-content">
-					（大片黑笔划掉无法辨认）<br>
-					今天又看<span style="color:red;font-size:14px;">dao</span>你了，在窗<span style="color:red;font-size:14px;">bian</span><br>
-					你以为拉上窗帘就<span style="color:red;font-size:14px;">kan</span>不到吗^^<br>
-					墙<span style="color:red;font-size:14px;">bi</span>的缝隙、衣柜角落、门后黑影<br>
-					（字迹潦草扭曲）我一<span style="color:red;font-size:14px;">zhi</span>在<span style="color:red;font-size:14px;">kan</span>你<br>
-					你被吓哭的样子，好可爱好想*哭你<br>
-					乱码：@%……&* 视线不会离开<br>
-					（浅红色晕染痕迹）<span style="color:red;">别躲，跑不掉的</span><br>
-					<span style="color:red;">好喜欢你</span>好喜欢你好喜欢你喜欢......<br>
+					（黑笔划掉的查寝名单）<br>
+					今天你又是最后一个回寝室。<br>
+					你把书包放在桌子左边，水杯放在电脑旁边。<br>
+					你拉床帘的时候，手抖了一下。<br>
+					你以为床帘合上以后，外面就<span style="color:red;font-size:14px;">kan</span>不见了吗^^<br>
+					床帘下面还有一道很窄的缝。<br>
+					你手机亮起来的时候，我看见了你的脸。<br>
+					<span style="color:red;">亲爱的，你真的好适合被我喜欢。</span><br>
 				</div>
 				<div class="page-next" id="toPage2">→</div>
 			</div>
 		
 			<div class="diary-page2" id="diaryPage2">
-				<div class="diary-date">04.25 无天光</div>
+				<div class="diary-date">10.22 查寝后</div>
 				<div class="diary-content">
-					昨晚你深夜起<span style="color:red;font-size:14px;">ye</span>，我都记<span style="color:red;font-size:14px;">xia</span>了<br>
-					你回头的瞬间，我<span style="color:red;font-size:14px;">cang</span>在暗处<br>
-					（反复涂改：<span style="color:red;">喜欢你</span>｜盯<span style="color:red;font-size:14px;">ni</span>｜<span style="color:red;">占有</span>）<br>
-					空房间的脚步声不是幻<span style="color:red;font-size:14px;">jue</span><br>
-					是我在慢慢靠近你的每一寸空间<br>
-					<span style="color:red;">为什么不愿意说我爱你？</span><br>
-					（墨迹晕开、断句破碎）<br>
-					回答我，必<span style="color:red;font-size:14px;">xu</span>回答我……
+					你今天没有去早八。<br>
+					闹钟响了三次，你都没有醒。<br>
+					我替你记下了课表。<br>
+					周三下午没课，周五晚上会去图书馆。<br>
+					你桌上的钥匙换了位置，你发现了吗？<br>
+					（反复涂改：<span style="color:red;">喜欢你</span>｜陪你｜只看我）<br>
+					不要再和那个人聊到那么晚。<br>
+					你笑的时候，屏幕亮得很刺眼。<br>
+					<span style="color:red;">他们只是路过你的人，我才是真的爱你。</span><br>
 				</div>
 				<div class="page-prev" id="toPage1">←</div>
 				<div class="page-next" id="toPage3">→</div>
 			</div>
 		
 			<div class="diary-page3" id="diaryPage3">
-				<div class="diary-date">04.26 永夜</div>
+				<div class="diary-date">10.23 断电</div>
 				<div class="diary-content">
-					我不允许你拥有除我之外的一切<br>
-					你的呼吸、身体、情绪都该属于我<br>
-					乖乖留在我身边<br>
-					永远、永远，只准看着我一个人<br>
+					今晚宿舍楼突然停电。<br>
+					所有人都在喊，只有你缩在床帘里没出声。<br>
+					我就站在你的床边。<br>
+					你呼吸变轻了。<br>
+					你知道我在那里，对吧？<br>
+					我不想再只是看着你了。<br>
 					<span style="color:red; font-size:22px; font-weight:bold;">我爱你^_^</span><br>
-					<span style="color:red; font-size:16px;">爱你</span>
-					<span style="color:red; font-size:18px;">爱你</span>
-					<span style="color:red; font-size:21px;">爱你</span>
-					<span style="color:red; font-size:24px;">爱......</span><br>
+					<span style="color:red; font-size:16px;">别搬走</span>
+					<span style="color:red; font-size:18px;">别离开</span>
+					<span style="color:red; font-size:21px;">别看别人</span>
+					<span style="color:red; font-size:24px;">只看我......</span><br>
 				</div>
 				<div class="page-prev" id="toPage2Back">←</div>
 				<div class="page-next" id="toPage4">→</div>
@@ -582,135 +583,286 @@
 		
 			<div class="diary-page4" id="diaryPage4">
 				<div class="diary-content">
-					<div style="color:#999;">又只有我自己了……</div>
-					<div style="color:#666;margin:15px 0;">你愿意成为我的爱人，永远陪着我吗？</div>
+					<div style="color:#999;">我一直在床帘外等你……</div>
+					<div style="color:#666;margin:15px 0;">你愿意成为我的爱人，把这间寝室变成只属于我们的秘密吗？</div>
 					<button class="start-btn" id="agreeBtn">我愿意</button>
 				</div>
 			</div>
 		</div>
 
 		<script>
-			const questions = [{
-					q: "1. 独处待在房间时，你总觉得暗处有视线在盯着你吗？",
-					opt: ["A. 经常会", "B. 偶尔察觉", "C. 几乎不会", "D. 完全没有"]
-				},
-				{
-					q: "2. 深夜关灯后，你会刻意回避看向镜子、玻璃反光物吗？",
-					opt: ["A.一定会避开", "B.偶尔不敢看", "C.无所谓", "D.很喜欢直视"]
-				},
-				{
-					q: "3. 你目前和伴侣的相处关系状态如何？",
-					opt: ["A.相处和睦，关系很好", "B.平淡疏离，不太要好", "C.长期冷战，互不沟通", "D.孤身一人，没有伴侣"]
-				},
-				{
-					q: "4. 安静的深夜里，你曾听见屋内出现细碎、不明的异响吗？",
-					opt: ["A.常常听到", "B.偶尔听见", "C.从没听过", "D.以为是错觉"]
-				},
-				{
-					q: "5. 走在空旷、昏暗的走廊或小巷，会下意识加快脚步吗？",
-					opt: ["A.极度紧张快步走", "B.会稍微加速", "C.正常行走", "D.毫无感觉"]
-				},
-				{
-					q: "6. 睡觉前，你会反复检查门窗、柜子是否完全关好锁死？",
-					opt: ["A.反复确认很多次", "B.简单检查一遍", "C.从不检查", "D.懒得在意"]
-				},
-				{
-					q: "7. 发呆放空时，耳边会出现模糊、听不清的低语声吗？",
-					opt: ["A.时常出现", "B.偶尔恍惚听到", "C.从未有过", "D.只当是幻听"]
-				},
-				{
-					q: "8. 无风吹动的情况下，你见过窗帘、衣物莫名轻轻晃动？",
-					opt: ["A.亲眼见过", "B.隐约注意过", "C.没有见过", "D.没留意过"]
-				},
-				{
-					q: "9. 你害怕半夜突然响起的手机提示音、门铃声这类异响吗？",
-					opt: ["A.极度害怕", "B.有点抵触心慌", "C.毫无波澜", "D.反而习惯"]
-				},
-				{
-					q: "10. 路过空无一人的封闭房间，会下意识往里张望打量吗？",
-					opt: ["A.不敢看却忍不住瞟", "B.会简单看一眼", "C.直接路过", "D.刻意绕开"]
-				},
-				{
-					q: "11. 你是否长期隐瞒自己的作息，不想被他人完全摸清？",
-					opt: ["A.刻意隐藏所有作息", "B.会隐瞒一部分", "C.完全公开", "D.无所谓别人知道"]
-				},
-				{
-					q: "12. 雾气朦胧的镜子前，你不敢长时间注视自己的倒影？",
-					opt: ["A.完全不敢", "B.看久会心慌", "C.正常对视", "D.毫无顾忌"]
-				},
-				{
-					q: "13. 走夜路时，你总下意识不敢回头，害怕身后有东西？",
-					opt: ["A.全程不敢回头", "B.偶尔会顾虑", "C.随意回头", "D.从不害怕"]
-				},
-				{
-					q: "14. 空无一人的家里，你曾听到过微弱脚步声或呼吸声吗？",
-					opt: ["A.清晰听到过", "B.模糊感知过", "C.从未听到", "D.自我安慰是幻觉"]
-				},
-				{
-					q: "15. 极度安静的环境里，你会产生莫名的心慌与压抑感？",
-					opt: ["A.安静越久越恐惧", "B.偶尔会不适", "C.没有任何感觉", "D.没有不适感还很享受"]
-				},
-				{
-					q: "16. 你会频繁怀疑，有人在悄悄翻看你的社交动态与日常？",
-					opt: ["A.一直心存戒备", "B.偶尔会担心", "C.从不怀疑", "D.无所谓被看见"]
-				},
-				{
-					q: "17. 深夜独自待着时，你是否会隐隐希望身边有陌生存在陪着你？",
-					opt: ["A.十分渴望", "B.偶尔会想", "C.完全不需要", "D.十分抗拒"]
-				},
-				{
-					q: "18. 你做过情节相似、场景固定、反复循环的重复噩梦？",
-					opt: ["A.经常做同类噩梦", "B.有过几次", "C.很少做梦", "D.从不做噩梦"]
-				},
-				{
-					q: "19. 你曾遇到过时间错乱、钟表异常、记忆断层的奇怪时刻？",
-					opt: ["A.多次遇到", "B.偶然发生", "C.从未有过", "D.记错而已"]
-				},
-				{
-					q: "20. 独自在家时，你会拒绝一切深夜陌生的敲门与求助吗？",
-					opt: ["A.绝对不会回应", "B.谨慎试探", "C.会正常回应", "D.主动开门查看"]
-				},
-				{
-					q: "21. 你会刻意假装忙碌，刻意不回复别人的消息来独处吗？",
-					opt: ["A.经常这样", "B.偶尔会", "C.几乎不会", "D.从来不会"]
-				},
-				{
-					q: "22. 空白墙面、阴暗角落，会让你产生莫名的压抑与恐惧？",
-					opt: ["A.看见就不舒服", "B.偶尔在意", "C.完全无感", "D.习惯角落"]
-				},
-				{
-					q: "23. 短暂失联时，你会害怕有人刻意四处寻找你的踪迹？",
-					opt: ["A.十分恐惧", "B.有点担心", "C.完全不怕", "D.期待被找到"]
-				},
-				{
-					q: "24. 醒来的一瞬间，你时常分不清现实与梦境的边界？",
-					opt: ["A.经常混淆", "B.偶尔恍惚", "C.从未混乱", "D.意识清醒但感官混乱"]
-				},
-				{
-					q: "25. 你相信，有看不见的未知事物，一直徘徊在我们身边？",
-					opt: ["A.完全相信", "B.半信半疑", "C.绝不相信", "D.刻意回避思考"]
-				},
-				{
-					q: "26. 你习惯手机不离手，绝不随意把设备单独放置角落？",
-					opt: ["A.时刻随身携带", "B.尽量不放独处角落", "C.随意摆放", "D.经常乱丢"]
-				},
-				{
-					q: "27. 密闭黑暗的狭小空间，会让你产生强烈的窒息感吗？",
-					opt: ["A.极度压抑难受", "B.稍有不适", "C.可以适应", "D.完全喜欢"]
-				},
-				{
-					q: "28. 你是否会反感他人过度打探你的生活细节与小习惯？",
-					opt: ["A.极度抵触警惕", "B.有点反感", "C.可以接受", "D.乐意分享"]
-				},
-				{
-					q: "29. 明明没有任何异常，却总会莫名觉得当下氛围不对劲？",
-					opt: ["A.经常莫名违和", "B.偶尔敏感多想", "C.神经大条无感", "D.从不胡思乱想"]
-				},
-				{
-					q: "30. 如果有陌生人默默记下了你所有喜好、习惯与小动作",
-					opt: ["A.极致恐惧抵触", "B.细思极恐不安", "C.有点暖心", "D.十分期待"]
-				}
-			];
+			const questions = [
+    {
+        "q": "1. 熄灯后躺在床帘里时，你会觉得外面有人隔着布料看你吗？",
+        "opt": [
+            "A. 经常会",
+            "B. 偶尔察觉",
+            "C. 几乎不会",
+            "D. 完全没有"
+        ]
+    },
+    {
+        "q": "2. 半夜手机屏幕忽然亮起时，你会担心照出床边的人影吗？",
+        "opt": [
+            "A. 一定会害怕",
+            "B. 偶尔会心慌",
+            "C. 不太在意",
+            "D. 反而想看清楚"
+        ]
+    },
+    {
+        "q": "3. 你目前是否有伴侣或喜欢的人？",
+        "opt": [
+            "A. 有稳定伴侣，关系很好",
+            "B. 有暧昧对象或喜欢的人",
+            "C. 有伴侣，但关系疏离",
+            "D. 孤身一人，没有伴侣"
+        ]
+    },
+    {
+        "q": "4. 宿舍楼道感应灯突然亮起时，你会下意识看向门口吗？",
+        "opt": [
+            "A. 每次都会",
+            "B. 偶尔会",
+            "C. 不会在意",
+            "D. 会想起有人在等我"
+        ]
+    },
+    {
+        "q": "5. 晚上从洗漱间回寝室，路过空寝室门口时你会加快脚步吗？",
+        "opt": [
+            "A. 会快步跑回去",
+            "B. 会稍微加速",
+            "C. 正常走回去",
+            "D. 会故意慢慢走"
+        ]
+    },
+    {
+        "q": "6. 睡前你会反复确认床帘、柜门、寝室门都关好吗？",
+        "opt": [
+            "A. 会确认很多次",
+            "B. 会简单看一遍",
+            "C. 几乎不检查",
+            "D. 懒得在意"
+        ]
+    },
+    {
+        "q": "7. 安静到只剩空调声时，你会听见像有人贴着床帘低声说话吗？",
+        "opt": [
+            "A. 时常听到",
+            "B. 偶尔恍惚听到",
+            "C. 从未有过",
+            "D. 只当是幻听"
+        ]
+    },
+    {
+        "q": "8. 没有人经过时，你见过床帘、衣服或晾衣架轻轻晃动吗？",
+        "opt": [
+            "A. 亲眼见过",
+            "B. 隐约注意过",
+            "C. 没有见过",
+            "D. 没留意过"
+        ]
+    },
+    {
+        "q": "9. 半夜手机突然弹出一条没有署名的消息，你会心里一紧吗？",
+        "opt": [
+            "A. 极度害怕",
+            "B. 有点心慌",
+            "C. 毫无波澜",
+            "D. 会想知道是不是他"
+        ]
+    },
+    {
+        "q": "10. 路过没有人的空寝室时，你会忍不住往里面看吗？",
+        "opt": [
+            "A. 不敢看却会瞟",
+            "B. 会简单看一眼",
+            "C. 直接路过",
+            "D. 会停下来确认"
+        ]
+    },
+    {
+        "q": "11. 你会刻意隐藏自己的课表和作息，不想被某个人完全摸清吗？",
+        "opt": [
+            "A. 会刻意隐藏",
+            "B. 会隐瞒一部分",
+            "C. 完全公开",
+            "D. 无所谓别人知道"
+        ]
+    },
+    {
+        "q": "12. 洗漱间镜子起雾时，你会避免长时间看自己的身后吗？",
+        "opt": [
+            "A. 完全不敢",
+            "B. 看久会心慌",
+            "C. 正常照镜子",
+            "D. 会故意盯着看"
+        ]
+    },
+    {
+        "q": "13. 深夜从楼梯间回宿舍时，你会不敢回头看身后吗？",
+        "opt": [
+            "A. 全程不敢回头",
+            "B. 偶尔会顾虑",
+            "C. 随意回头",
+            "D. 会期待有人跟着"
+        ]
+    },
+    {
+        "q": "14. 熄灯后，你听到过床帘外微弱的脚步声或呼吸声吗？",
+        "opt": [
+            "A. 清晰听到过",
+            "B. 模糊感知过",
+            "C. 从未听到",
+            "D. 会希望那是他"
+        ]
+    },
+    {
+        "q": "15. 熄灯后的宿舍太安静时，你会产生莫名的心慌与压抑感吗？",
+        "opt": [
+            "A. 安静越久越害怕",
+            "B. 偶尔会不适",
+            "C. 没有任何感觉",
+            "D. 反而觉得被陪着"
+        ]
+    },
+    {
+        "q": "16. 你会怀疑有人悄悄翻看你的朋友圈、课表和每一次动态吗？",
+        "opt": [
+            "A. 一直心存戒备",
+            "B. 偶尔会担心",
+            "C. 从不怀疑",
+            "D. 无所谓被看见"
+        ]
+    },
+    {
+        "q": "17. 深夜躲在床帘里时，你是否隐隐希望有人只陪你一个人说话？",
+        "opt": [
+            "A. 十分渴望",
+            "B. 偶尔会想",
+            "C. 完全不需要",
+            "D. 十分抗拒"
+        ]
+    },
+    {
+        "q": "18. 你做过以宿舍、床帘外的人影、楼道为场景的重复噩梦吗？",
+        "opt": [
+            "A. 经常做",
+            "B. 有过几次",
+            "C. 很少做梦",
+            "D. 从不做噩梦"
+        ]
+    },
+    {
+        "q": "19. 你醒来后发现手机、闹钟或桌上物品的位置变过吗？",
+        "opt": [
+            "A. 多次发生",
+            "B. 偶然发生",
+            "C. 从未有过",
+            "D. 可能是我记错了"
+        ]
+    },
+    {
+        "q": "20. 半夜有人轻轻敲寝室门，又发来一句“亲爱的，我在门外”，你会回应吗？",
+        "opt": [
+            "A. 绝对不会回应",
+            "B. 会小声询问",
+            "C. 会发消息让他离开",
+            "D. 会想确认是不是他"
+        ]
+    },
+    {
+        "q": "21. 你会假装睡着，避免回应床帘外的人或消息吗？",
+        "opt": [
+            "A. 经常这样",
+            "B. 偶尔会",
+            "C. 几乎不会",
+            "D. 从来不会"
+        ]
+    },
+    {
+        "q": "22. 床底、衣柜、床帘缝隙或阳台角落，会让你产生莫名的压抑感吗？",
+        "opt": [
+            "A. 看见就不舒服",
+            "B. 偶尔在意",
+            "C. 完全无感",
+            "D. 会觉得它们很安心"
+        ]
+    },
+    {
+        "q": "23. 短暂失联时，你会害怕有人按照课表和门禁记录到处找你吗？",
+        "opt": [
+            "A. 十分恐惧",
+            "B. 有点担心",
+            "C. 完全不怕",
+            "D. 期待被找到"
+        ]
+    },
+    {
+        "q": "24. 午睡醒来时，你会分不清宿舍里哪些声音是真的、哪些来自梦里吗？",
+        "opt": [
+            "A. 经常混淆",
+            "B. 偶尔恍惚",
+            "C. 从未混乱",
+            "D. 明明清醒却仍听见"
+        ]
+    },
+    {
+        "q": "25. 你相信有一个爱你的人，可能一直停在床帘外的阴影里吗？",
+        "opt": [
+            "A. 完全相信",
+            "B. 半信半疑",
+            "C. 绝不相信",
+            "D. 刻意回避思考"
+        ]
+    },
+    {
+        "q": "26. 你习惯把手机放在枕边，避免被别人拿走或偷看吗？",
+        "opt": [
+            "A. 时刻放在身边",
+            "B. 尽量不离手",
+            "C. 随意摆放",
+            "D. 经常乱丢"
+        ]
+    },
+    {
+        "q": "27. 上铺、床帘、衣柜这类狭小空间，会让你产生窒息感吗？",
+        "opt": [
+            "A. 极度压抑难受",
+            "B. 稍有不适",
+            "C. 可以适应",
+            "D. 反而很喜欢"
+        ]
+    },
+    {
+        "q": "28. 你会反感某个人过度打探你的生活细节、小习惯和感情状态吗？",
+        "opt": [
+            "A. 极度抵触警惕",
+            "B. 有点反感",
+            "C. 可以接受",
+            "D. 乐意分享"
+        ]
+    },
+    {
+        "q": "29. 明明只是普通宿舍夜晚，你却总觉得床帘外多了一个只看着你的人吗？",
+        "opt": [
+            "A. 经常莫名违和",
+            "B. 偶尔敏感多想",
+            "C. 神经大条无感",
+            "D. 从不胡思乱想"
+        ]
+    },
+    {
+        "q": "30. 如果有人默默记下了你的课表、床位、喜好、回寝路线和每一次晚归，你会怎么想？",
+        "opt": [
+            "A. 极致恐惧抵触",
+            "B. 细思极恐不安",
+            "C. 有点被在意的感觉",
+            "D. 希望他一直记得"
+        ]
+    }
+];
 
 			let current = 0;
 			let answers = Array(questions.length).fill(null);
@@ -729,6 +881,7 @@
 			let fromQ4ToQ5 = false;
 			let q5Timer = null;
 			let q25Timer = null;
+			let q25Timeout = null;
 			let q25Elements = [];
 			let grayMask = null;
 			let wrongCount = 0;
@@ -736,21 +889,22 @@
 			let q25Locked = false;
 
 			function clearAllEffects() {
-				if (current !== 24) {
-					stopQ25Effect();
+				stopQ25Effect();
+				if (q5Timer) {
+					clearTimeout(q5Timer);
+					q5Timer = null;
 				}
-				if (q5Timer) clearTimeout(q5Timer);
 				document.querySelectorAll(
 					'.float-text,.terror-mask,.fullscreen-love,.start-modal,.q16-modal,.submit-modal,.black-screen,.black-full-text,.end-modal'
 				).forEach(el => el.remove());
-				document.body.style.background = "#f7f8fa";
+				document.documentElement.style.setProperty('background', '#eef2f5', 'important');
+				document.body.style.setProperty('background', '#eef2f5', 'important');
 				boxEl.style.opacity = "1";
-				prevBtn.disabled = false;
-				nextBtn.disabled = false;
+				updateNextButtonState();
 			}
 
 			function resetDiary() {
-				diaryPage1.style.display = "block";
+				diaryPage1.style.display = "flex";
 				diaryPage2.style.display = "none";
 				diaryPage3.style.display = "none";
 				diaryPage4.style.display = "none";
@@ -758,7 +912,14 @@
 			}
 
 			function stopQ25Effect() {
-				if (q25Timer) clearInterval(q25Timer);
+				if (q25Timer) {
+					clearInterval(q25Timer);
+					q25Timer = null;
+				}
+				if (q25Timeout) {
+					clearTimeout(q25Timeout);
+					q25Timeout = null;
+				}
 				q25Elements.forEach(el => {
 					if (el && el.parentNode) el.remove();
 				});
@@ -770,6 +931,7 @@
 					opt.classList.remove('locked');
 					opt.style.pointerEvents = 'auto';
 				});
+				updateNextButtonState();
 			}
 
 			function startQ25Effect() {
@@ -787,32 +949,37 @@
 				document.body.appendChild(grayMask);
 
 				const peepArr = [
-					"我一直在看着你",
-					"不要躲开哦^^",
-					"我看见你了",
-					"你跑不掉的",
-					"我在你身边",
-					"我来找你了^^",
-					"你早就被盯上了",
-					"悄悄看着你",
-					"爱你爱你爱你",
-					"别离开视线",
-					"你逃不掉的",
-					"一直陪着你"
+					"床帘挡不住",
+					"亲爱的，我在这里",
+					"我知道你醒着",
+					"你手机还亮着",
+					"别装睡哦^^",
+					"你刚才翻身了",
+					"门口的人是我",
+					"我在床帘外等你",
+					"我记得你的课表",
+					"只准看着我",
+					"我爱你我爱你",
+					"今晚别离开寝室"
 				];
+				prevBtn.disabled = true;
+				nextBtn.disabled = true;
+
 				q25Timer = setInterval(() => {
-					for (let i = 0; i < 15; i++) {
+					const fragment = document.createDocumentFragment();
+					for (let i = 0; i < 8; i++) {
 						const p = document.createElement('div');
 						p.className = "peep-text";
 						p.innerText = peepArr[Math.floor(Math.random() * peepArr.length)];
 						p.style.left = Math.random() * 100 + "vw";
 						p.style.top = Math.random() * 100 + "vh";
-						document.body.appendChild(p);
+						fragment.appendChild(p);
 						q25Elements.push(p);
 					}
-				}, 100);
+					document.body.appendChild(fragment);
+				}, 200);
 
-				setTimeout(() => {
+				q25Timeout = setTimeout(() => {
 					stopQ25Effect();
 				}, 5000);
 			}
@@ -822,9 +989,9 @@
 				mainBox.style.display = "none";
 
 				const tipTexts = [
-					"<b style='font-size:16px;'>欢迎参与本次心理调查问卷</b>",
-					"<b style='font-size:16px;'>请根据自身真实感受选择答案</b>",
-					"<b style='font-size:16px;'>题目含特殊互动效果^_^</b>",
+					"<b style='font-size:16px;'>欢迎参与本次宿舍生活适应调查</b>",
+					"<b style='font-size:16px;'>请根据你的真实宿舍经历作答</b>",
+					"<b style='font-size:16px;'>题目含床帘、晚归、课表与特殊互动^_^</b>",
 					"<b style='font-size:16px;'>准备就绪，开始答题</b>"
 				];
 				let idx = 0;
@@ -835,7 +1002,7 @@
 				textDom.innerHTML = tipTexts[idx];
 				const redTip = document.createElement("div");
 				redTip.className = "tiny-red-tip";
-				redTip.innerText = "注：本问卷包含微恐/窥视/强制，如有不适请立即停止作答";
+				redTip.innerText = "注：本问卷包含微恐/窥视/病娇爱意/强制互动，如有不适请立即停止作答";
 				const btnDom = document.createElement("button");
 				btnDom.className = "start-btn";
 				btnDom.innerText = "继续";
@@ -867,21 +1034,20 @@
 					opts.forEach(o => o.style.pointerEvents = "none");
 					prevBtn.disabled = true;
 					nextBtn.disabled = true;
-					setTimeout(() => opts[0].innerText = "亲爱的等我好吗", 0);
-					setTimeout(() => opts[1].innerText = "亲爱的等我好吗", 300);
-					setTimeout(() => opts[2].innerText = "亲爱的等我好吗", 600);
-					setTimeout(() => opts[3].innerText = "亲爱的等我好吗", 900);
+					setTimeout(() => opts[0].innerText = "亲爱的，别回寝室太晚", 0);
+					setTimeout(() => opts[1].innerText = "亲爱的，别回寝室太晚", 300);
+					setTimeout(() => opts[2].innerText = "亲爱的，别回寝室太晚", 600);
+					setTimeout(() => opts[3].innerText = "亲爱的，别回寝室太晚", 900);
 					setTimeout(() => {
 						if (current !== 4) return;
 						opts.forEach((o, i) => o.innerText = originalTexts[i]);
 						opts.forEach(o => o.style.pointerEvents = "auto");
-						prevBtn.disabled = current === 0;
-						nextBtn.disabled = false;
+						updateNextButtonState();
 					}, 3000);
 				}, 1500);
 			}
 
-			const glitchChars = ["@#￥%", "……&*", "!@#$", "%^&*", "#￥%……", "&*^^", "@*&%", "#￥……&"];
+			const glitchChars = ["@#￥%", "……&*", "!@#$", "%^&*", "床帘", "空床", "门把手", "熄灯"];
 
 			function startQ8Effect(selectedIndex) {
 				document.documentElement.style.setProperty('background', '#d80000', 'important');
@@ -891,7 +1057,7 @@
 				nextBtn.disabled = true;
 				document.querySelectorAll('.option').forEach(o => o.style.pointerEvents = "none");
 
-				let textList = selectedIndex < 2 ? ["亲爱的你注意到我了^^", "我好开心"] : ["亲爱的你是故意的吗^^", "我好难过"];
+				let textList = selectedIndex < 2 ? ["亲爱的，你看到床帘动了吧^^", "我好开心，你终于看我了"] : ["亲爱的，你是故意装作没看见吗^^", "我会难过的"];
 
 				const created = [];
 				const centerX = 50;
@@ -919,8 +1085,8 @@
 				setTimeout(() => {
 					clearInterval(timer);
 					created.forEach(e => e.remove());
-					document.documentElement.style.setProperty('background', '#f7f8fa', 'important');
-					document.body.style.setProperty('background', '#f7f8fa', 'important');
+					document.documentElement.style.setProperty('background', '#eef2f5', 'important');
+					document.body.style.setProperty('background', '#eef2f5', 'important');
 					boxEl.style.opacity = "1";
 					prevBtn.disabled = current === 0;
 					nextBtn.disabled = false;
@@ -989,7 +1155,7 @@
 			}
 
 			function openQ16Modal() {
-				const texts = ["^^", "亲爱的", "我看见你了", "......"];
+				const texts = ["^^", "亲爱的", "别把床帘拉那么紧", "我看见你还没睡"];
 				let index = 0;
 				const modal = document.createElement("div");
 				modal.className = "q16-modal";
@@ -1017,10 +1183,10 @@
 			function blackPunish() {
 				const screen = document.createElement("div");
 				screen.className = "black-screen";
-				screen.innerText = "不要试图违背我^";
+				screen.innerText = "不要试图离开我^";
 				document.body.appendChild(screen);
 				setTimeout(() => {
-					screen.innerText = "再给你一次机会";
+					screen.innerText = "再给你一次爱我的机会";
 					screen.style.color = "#ffffff";
 					screen.style.textShadow = "0 0 2px #fff, 0 0 5px #fff, 0 0 8px #ddd";
 				}, 2000);
@@ -1037,7 +1203,7 @@
 				const inner = document.createElement("div");
 				inner.className = "submit-modal-inner";
 				inner.innerHTML = `
-				<div style="margin-bottom: 10px; font-size: 16px; text-align: center;">请输入指定文字解锁查看</div>
+				<div style="margin-bottom: 10px; font-size: 16px; text-align: center;">请输入指定文字，打开床帘里的留言</div>
 				<div style="display: flex; flex-direction: column; gap: 16px; align-items: center; width: 100%;">
 					<input 
 						type="text" 
@@ -1109,7 +1275,7 @@
 				inner.className = "submit-modal-inner";
 				inner.innerHTML = `
 					<div style="font-size:16px;font-weight:bold;">问卷作答完毕</div>
-					<div style="margin:12px 0;">有一封你的留言是否要查看？</div>
+					<div style="margin:12px 0;">床帘里夹着一封写给你的留言，是否查看？</div>
 					<button class="submit-btn" id="yesBtn">是</button>
 					<div class="refuse-tip">不准拒绝^_^</div>
 				`;
@@ -1123,23 +1289,23 @@
 
 			document.getElementById("toPage2").onclick = function() {
 				diaryPage1.style.display = "none";
-				diaryPage2.style.display = "block";
+				diaryPage2.style.display = "flex";
 			};
 			document.getElementById("toPage1").onclick = function() {
 				diaryPage2.style.display = "none";
-				diaryPage1.style.display = "block";
+				diaryPage1.style.display = "flex";
 			};
 			document.getElementById("toPage3").onclick = function() {
 				diaryPage2.style.display = "none";
-				diaryPage3.style.display = "block";
+				diaryPage3.style.display = "flex";
 			};
 			document.getElementById("toPage2Back").onclick = function() {
 				diaryPage3.style.display = "none";
-				diaryPage2.style.display = "block";
+				diaryPage2.style.display = "flex";
 			};
 			document.getElementById("toPage4").onclick = function() {
 				diaryPage3.style.display = "none";
-				diaryPage4.style.display = "block";
+				diaryPage4.style.display = "flex";
 			};
 
 			document.getElementById("agreeBtn").onclick = function() {
@@ -1156,7 +1322,7 @@
 				    `;
 				const textDom = blackFull.querySelector('.text-container');
 				const confirmBtn = blackFull.querySelector('.red-confirm-btn');
-				let textArr = ["我爱你", "好喜欢你", "想和你一直在一起"];
+				let textArr = ["我爱你", "好喜欢你", "别搬走", "想和你一直在一起"];
 				let textIndex = 0;
 
 				function showText() {
@@ -1179,7 +1345,7 @@
 					endModal.className = "end-modal";
 					endModal.innerHTML = `
 						<div style="font-size:16px;font-weight:bold;margin-bottom:15px;">问卷已结束</div>
-						<div style="color:#666;margin-bottom:16px;">他在等你</div>
+						<div style="color:#666;margin-bottom:16px;">他在你的床帘外等你</div>
 						<button class="start-btn" id="restartBtn">确认</button>
 					`;
 					document.body.appendChild(endModal);
@@ -1198,6 +1364,27 @@
 				};
 			};
 
+			function updateNextButtonState() {
+				prevBtn.disabled = current === 0;
+				nextBtn.disabled = answers[current] === null;
+			}
+
+			function markInvalidOption(div, text) {
+				answers[current] = null;
+				document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+				div.classList.add("locked");
+				div.innerText = text;
+				div.onclick = null;
+				updateNextButtonState();
+			}
+
+			function selectAnswer(idx, div) {
+				answers[current] = idx;
+				document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+				div.classList.add('selected');
+				updateNextButtonState();
+			}
+
 			function renderQuestion() {
 				clearAllEffects();
 				const q = questions[current];
@@ -1212,10 +1399,19 @@
 					if (answers[current] === idx) div.classList.add("selected");
 					div.innerText = item;
 					div.onclick = () => {
-						answers[current] = idx;
+						// 这些选项是剧情上的“禁止选择”，不能先写入答案，否则仍可点下一题跳过。
+						if (current === 16 && idx > 1) {
+							markInvalidOption(div, "不许选^");
+							return;
+						}
 
-						document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
-						div.classList.add('selected');
+						if (current === 19 && idx < 3) {
+							const lockedTexts = ["亲爱的别拒绝我TT", "你这样我会伤心^^", "不许让别人进来哦"];
+							markInvalidOption(div, lockedTexts[idx]);
+							return;
+						}
+
+						selectAnswer(idx, div);
 
 						if (current === 24) {
 							startQ25Effect();
@@ -1223,7 +1419,10 @@
 						}
 
 						if (current === 2) {
-							idx < 3 ? triggerTerror("真让人难过^^", current + 1) : triggerTerror("真让人高兴^^", current + 1);
+							if (idx === 0) triggerTerror("别让他靠你太近好吗^^", current + 1);
+							else if (idx === 1) triggerTerror("只是喜欢的人，也可以忘掉吧^^", current + 1);
+							else if (idx === 2) triggerTerror("关系疏离的话，就只看我吧^^", current + 1);
+							else triggerTerror("真好，你只能看我了^^", current + 1);
 							return;
 						}
 						if (current === 7) {
@@ -1235,38 +1434,12 @@
 							return;
 						}
 						if (current === 16) {
-							if (idx === 0 || idx === 1) {
-								startLoveTyping();
-							} else {
-								div.classList.add("locked");
-								div.innerText = "不许选^";
-								div.onclick = null;
-							}
+							startLoveTyping();
 							return;
 						}
 						if (current === 19) {
-							// A 变字 + 锁定
-							if (idx === 0) {
-								div.innerText = "亲爱的别拒绝我TT";
-								div.classList.add("locked");
-								div.onclick = null;
-							}
-							// B 变字 + 锁定
-							if (idx === 1) {
-								div.innerText = "真让人寒心^^";
-								div.classList.add("locked");
-								div.onclick = null;
-							}
-							// C 变字 + 锁定
-							if (idx === 2) {
-								div.innerText = "不许给别人开门哦";
-								div.classList.add("locked");
-								div.onclick = null;
-							}
 							// D 只变字 + 不锁定、可正常选择
-							if (idx === 3) {
-								div.innerText = "只能看着我";
-							}
+							div.innerText = "把门打开，我在外面";
 							return;
 						}
 					};
@@ -1278,8 +1451,8 @@
 					fromQ4ToQ5 = false;
 				}
 
-				prevBtn.disabled = current === 0;
 				nextBtn.innerText = current === total - 1 ? "提交问卷" : "下一题";
+				updateNextButtonState();
 			}
 
 			prevBtn.onclick = () => {
@@ -1290,6 +1463,7 @@
 				}
 			};
 			nextBtn.onclick = () => {
+				if (answers[current] === null) return;
 				clearAllEffects();
 				if (current === 3) fromQ4ToQ5 = true;
 				if (current < total - 1) {
@@ -1302,7 +1476,7 @@
 
 			openStartModal();
 		</script>
-		<audio id="bgm" src="bgm.m4a" loop preload="auto">
+		<audio id="bgm" src="bgm.m4a" loop preload="auto"></audio>
 		<script>
 		let bgm = document.getElementById('bgm');
 		bgm.muted = true;
